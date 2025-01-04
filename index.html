@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت سالن های سعدی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sarbaz-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Sarbaz', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: #fff;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg,#1e3c72, #07a84a, #be9d09, #0ac7d4);
+            background-size: 400% 400%;
+            animation: backgroundMove 10s infinite linear;
+            z-index: -1;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            font-size: 32px;
+            text-align: right;
+            padding: 20px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 80px);
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .content {
+            width: 75%;
+            padding: 20px;
+            overflow-y: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #000; /* رنگ متن محتوای هر هفته */
+        }
+        .week-list button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .week-list button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .photos img {
+            width: 170px; /* افزایش اندازه تصاویر */
+            height: 150px; /* افزایش ارتفاع تصاویر */
+            margin: 7px; /* فضای بیشتر بین تصاویر */
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        .info-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1; /* اطمینان از اینکه دکمه بالای تمام محتوا نمایش داده می‌شود */
+        }
+        .info-button a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        .week-content {
+            animation: slideIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>سایت سالن های سعدی</h1>
+    <button class="info-button"><a href="https://serverqp.github.io/EnterAi/" target="_blank">i</a></button> <!-- دکمه کوچک با عنوان i -->
+    <div class="container">
+        <div class="sidebar">
+<div class="week-list">
+                <button onclick="showWeek('week1')">۰۳/۹/۲۸</button>
+                <button onclick="showWeek('week2')">۰۳/۱۰/۴</button>
+                <button onclick="showWeek('week3')">۰۳/۱۰/۱۱</button>
+            </div>
+        </div>
+        <div class="content">
+            <div id="week1" class="week-content" style="display: none;">
+                <h2>1403/9/28 چهارشنبه</h2>
+                <p>سالن راه آهن ساعت 12 تا 13:30 با حضور آقای عامل🗿</p>
+                <div class="photos">
+                    <img src="https://raw.githubusercontent.com/JavadCamback/Sadi/main/photo16060994075.jpg" alt="ساماندهی محتوا ۱">
+                    <img src="https://raw.githubusercontent.com/JavadCamback/Sadi/main/photo16060839073.jpg" alt="ساماندهی محتوا ۲">
+                    <img src="https://raw.githubusercontent.com/JavadCamback/Sadi/main/photo16060838416.jpg" alt="ساماندهی محتوا ۳">
+                </div>
+            </div>
+            <div id="week2" class="week-content" style="display: none;">
+                <h2>1403/10/4 سه شنبه</h2>
+                <p>سالن راه آهن ساعت 10:30 تا 12</p>
+                <div class="photos">
+                    <img src="https://raw.githubusercontent.com/JavadCamback/Sadi/main/photo16060426129.jpg" alt="ساماندهی محتوا ۴">
+                    <img src="https://raw.githubusercontent.com/JavadCamback/Sadi/main/photo16060426866.jpg" alt="ساماندهی محتوا ۵">
+                    <img src="https://raw.githubusercontent.com/JavadCamback/Sadi/main/photo16060426520.jpg" alt="ساماندهی محتوا ۶">
+                </div>
+            </div>
+            <div id="week3" class="week-content" style="display: none;">
+                <h2>1403/10/11 سه شنبه</h2>
+                <p>سالن شهید کوشه ای ساعت 12 تا 2 </p>
+                <div class="photos">
+                    <img src="https://raw.githubusercontent.com/Serverqp/DarAmad/main/photo16073999667.jpg" alt="ساماندهی محتوا ۷">
+                    <img src="https://raw.githubusercontent.com/Serverqp/BanMj/main/photo16073996607.jpg" alt="ساماندهی محتوا ۸">
+                    <img src="https://via.placeholder.com/150" alt="ساماندهی محتوا ۹">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+   </footer>
+    <script>
+        function showWeek(weekId) {
+            const contents = document.querySelectorAll('.week-content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(weekId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
